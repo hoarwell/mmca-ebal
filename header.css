@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "yun160";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/yun160.ttf");
+}
+
+@font-face {
+  font-family: "yun140";
+  font-weight: lighter;
+  font-style: normal;
+  src: url("yun140.ttf");
+}
+
+@font-face {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal, bold;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+  unicode-range: U+AC00- U+D7A3; /* 한글만 */
+}
+
+@font-face {
+  font-family: "Suisse Intl", sans-serif;
+  font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot");
+  src: url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.svg#Suisse Intl")
+      format("svg");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039; /* 영문 대문자, 소문자, 숫자 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.lang-select {
+  position: fixed;
+  z-index: 4;
+  right: 2vh;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.nav {
+  position: fixed;
+  z-index: 4;
+  bottom: -10vh;
+  width: 100vw;
+  height: 7vh;
+  border-top: 2px solid black;
+  background-color: white;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.nav-lists {
+  height: 100%;
+  font-family: Suisse Intl, Noto Sans KR, sans-serif;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-lists a {
+  font-size: 2vw;
+  letter-spacing: -0.12vw;
+  word-spacing: -0.369vw;
+  margin-top: 0.5vw;
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
+header h1 {
+  font-size: 10vw;
+  letter-spacing: -0.8333vw;
+  line-height: 0.999;
+}
+
+header p {
+  font-size: 1.65vw;
+  letter-spacing: -0.12vw;
+  word-spacing: -0.369vw;
+  margin-top: 0.5vw;
+}
+
+.header {
+  font-family: yun160;
+}
+
+.header-slash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header-background {
+  background-color: white;
+  width: 100vw;
+  height: 170vh;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 47vw;
+  margin: 0 1.5vw 0 1.5vw;
+}
+
+.left-top-container {
+  display: flex;
+}
+
+.left-bottom-container {
+  display: flex;
+}
+
+.left-top-container h1 {
+  margin-left: 5.3vw;
+}
+
+.left-bottom-container h1 {
+  margin-left: 7.6vw;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 53vw;
+  margin: 0 1.5vw 0 1.5vw;
+}
+
+.right-top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-top-container img {
+  width: 4.166666666666667vw;
+  height: 4.166666666666667vw;
+  margin-top: 0.5vw;
+}
+
+.right-bottom-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-bottom-container p {
+  margin-left: 0.8vw;
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    overscroll-behavior: none; /* safari unsupport*/
+  }
+
+  .reservation {
+    font-weight: 400;
+  }
+
+  .nav {
+    border-top: 1.5px solid black;
+  }
+
+  .nav-lists a {
+    height: 10vh;
+    font-size: 3.5vw;
+  }
+
+  header h1 {
+    font-size: 17vw;
+    letter-spacing: -0.8333vw;
+    line-height: 0.999;
+  }
+
+  header p {
+    font-size: 2.804vw;
+    letter-spacing: -0.12vw;
+    word-spacing: -0.369vw;
+    margin-top: 0.5vw;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: 93vh;
+    z-index: 2;
+  }
+
+  .left-container {
+    width: 90vw;
+    margin-bottom: 3vh;
+  }
+
+  .right-container {
+    width: 90vw;
+  }
+
+  .left-top-container h1 {
+    margin-left: 10vw;
+  }
+
+  .left-bottom-container h1 {
+    margin-left: 14vw;
+  }
+
+  .header-slash {
+    display: block !important;
+    z-index: 1;
+  }
+
+  .header-background {
+    display: block;
+    z-index: 1;
+    background-color: white;
+    width: 0;
+    max-width: 100%;
+    height: 300vh;
+  }
+}

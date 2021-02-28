@@ -1,0 +1,30 @@
+@import "header.css";
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 18vh;
+  font-family: Suisse Intl, sans-serif;
+  width: 80vw;
+}
+
+footer p {
+  margin-bottom: 30px;
+}
+
+footer img {
+  width: 20%;
+}
+
+@media screen and (max-width: 769px) {
+  footer {
+    width: 90vw;
+  }
+
+  footer p {
+    font-size: 1.9vw;
+  }
+}

@@ -7,8 +7,6 @@
   const slash = document.querySelector(".header-slash");
   const line = document.querySelector(".header-svg line");
 
-  function scrollSmooth() {}
-
   function navMove() {
     // 밑에서 위로 올라오는 네비게이션 메뉴
     // 부드러움은 css로 처리

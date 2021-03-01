@@ -1,26 +1,26 @@
 @font-face {
-  font-family: "yun160";
+  font-family: "YDIYGO140-KSCpc-EUC-H";
+  src: url("../font/YDIYGO140-KSCpc-EUC-H.eot");
+  src: url("../font/YDIYGO140-KSCpc-EUC-H.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/YDIYGO140-KSCpc-EUC-H.woff2") format("woff2"),
+    url("../font/YDIYGO140-KSCpc-EUC-H.woff") format("woff"),
+    url("../font/YDIYGO140-KSCpc-EUC-H.ttf") format("truetype"),
+    url("../font/YDIYGO140-KSCpc-EUC-H.svg#YDIYGO140-KSCpc-EUC-H") format("svg");
   font-weight: normal;
   font-style: normal;
-  src: url("/yun160.ttf");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "yun140";
-  font-weight: lighter;
+  font-family: "Noto Sans KR";
   font-style: normal;
-  src: url("yun140.ttf");
-}
-
-@font-face {
-  font-family: "Noto Sans KR", sans-serif;
-  font-style: normal, bold;
   src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
   unicode-range: U+AC00- U+D7A3; /* 한글만 */
 }
 
 @font-face {
-  font-family: "Suisse Intl", sans-serif;
+  font-family: "Suisse Intl";
   font-style: normal;
   src: url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot");
   src: url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot?#iefix")
@@ -67,9 +67,13 @@ body::-webkit-scrollbar {
   position: fixed;
   z-index: 4;
   bottom: -10vh;
-  width: 100vw;
+  left: 10%;
+  width: 80vw;
   height: 7vh;
-  border-top: 2px solid black;
+  border: 2px solid black;
+  border-bottom: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: white;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -85,8 +89,7 @@ body::-webkit-scrollbar {
 }
 
 .nav-lists a {
-  font-size: 2vw;
-  letter-spacing: -0.12vw;
+  font-size: 1.8vw;
   word-spacing: -0.369vw;
   margin-top: 0.5vw;
   text-decoration: none;
@@ -112,7 +115,8 @@ header p {
 }
 
 .header {
-  font-family: yun160;
+  font-family: YDIYGO140-KSCpc-EUC-H;
+  font-weight: 400;
 }
 
 .header-slash {
@@ -204,12 +208,25 @@ header p {
   }
 
   .nav {
+    position: fixed;
+    z-index: 4;
+    bottom: -10vh;
+    left: 0;
+    width: 100vw;
+    height: 7vh;
+    border: 0;
+    border-bottom: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
     border-top: 1.5px solid black;
   }
 
   .nav-lists a {
     height: 10vh;
-    font-size: 3.5vw;
+    font-size: 3.3vw;
   }
 
   header h1 {

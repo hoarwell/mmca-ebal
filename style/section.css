@@ -1,7 +1,7 @@
 @import "../style/header.css";
 
 .detail-container {
-  width: 75vw;
+  width: 70vw;
   margin-bottom: 8vh;
 }
 
@@ -31,10 +31,10 @@ a[href^="tel"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13rem;
+  width: 20rem;
   height: 8vh;
   border: 2px solid black;
-  border-radius: 25px;
+  border-radius: 50%;
 }
 
 .reservation-container {
@@ -51,7 +51,7 @@ a[href^="tel"] {
 
 .section {
   font-family: Suisse Intl, Noto Sans KR, sans-serif;
-  width: 75vw;
+  width: 70vw;
   scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
@@ -131,7 +131,7 @@ div {
 }
 
 .img-container div img {
-  width: 30vw;
+  width: 25vw;
   margin-bottom: 13vh;
 }
 

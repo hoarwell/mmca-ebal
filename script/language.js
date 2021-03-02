@@ -146,9 +146,9 @@ i18next.init(
           FAX : 02-2022-0644`,
           fee: `관람료`,
           feeDescription: `별도 공지 시까지 무료 입장 (덕수궁입장료 별도)`,
-          notice1: `※ 코로나19 확산 예방 및 관람객 안전을 위하여, 당분간 단체 예약을
+          notice1: `코로나19 확산 예방 및 관람객 안전을 위하여, 당분간 단체 예약을
           받지 않습니다. (단체예약 재개 추후 공지)`,
-          notice2: `※ 휠체어 이용에 관한 문의는 02-2022-0640으로 전화 부탁드립니다.`,
+          notice2: `휠체어 이용에 관한 문의는 02-2022-0640으로 전화 부탁드립니다.`,
           book: `전 시 예 약`,
         },
       },
@@ -183,7 +183,7 @@ i18next.init(
           artno5: `Choi Jaideok, Poplar Trees on the Han River, <br />1940s, oil on canvas, 65 × 91 cm, private collection`,
           artno6: `​Lee Jungseop, Family of Poet Ku Sang, <br />1955, pen and oil on paper, 32 × 49.5 cm, private collection`,
           artno7: `Kim Yongjun, Ten-panel Folding Screen with Still Life, <br />1942, ink and color on silk, <br />each panel 130.3 × 35.7 cm, private collection`,
-          artno8: `​Kim Whanki, Untitled, 1969–73, <br />oil on canvas, 86.5 × 60.7 cm, private collection ⓒWhanki Foundation·Whanki Museum`,
+          artno8: `​Kim Whanki, Untitled, 1969–73, <br />oil on canvas, 86.5 × 60.7 cm, private collection <br />ⓒWhanki Foundation·Whanki Museum`,
           time: `Time`,
           timeDescription: `Tuesday, Thursday, Friday, Sunday: 10:00 ~ 18:00<br/>
           Wednesday, Saturday: 10:00 ~ 21:00`,
@@ -191,8 +191,8 @@ i18next.init(
           addressDescription: `99 Sejong-daero, Jung-gu, Seoul 04519 <br /> TEL : +82-2-2022-0600(ARS switchboard)`,
           fee: `Admission Fee`,
           feeDescription: `Admission fee is charged differently according to the exhibition. Please refer to the museum website for details`,
-          notice1: `※ For prevent of covid-19 and safety issues, we don’t take group reservations for now. `,
-          notice2: `※ Please contact 02-2022-0640 for inquiries of using wheelchair.`,
+          notice1: `For prevent of covid-19 and safety issues, we don’t take group reservations for now. `,
+          notice2: `Please contact 02-2022-0640 for inquiries of using wheelchair.`,
           book: `B O O K I N G`,
         },
       },

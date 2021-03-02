@@ -1,11 +1,32 @@
 (() => {
   const lang = document.querySelector(".lang-select");
+  const body = document.querySelector("body");
   const nav = document.querySelector(".nav");
+  const lists = document.querySelectorAll(".nav-list a");
   const section = document.querySelector(".section-container");
+  const sections = document.querySelectorAll("section");
+  const contents = document.querySelectorAll(".content-container");
   const background = document.querySelector(".header-background");
   const headerContainer = document.querySelector(".header-container");
   const slash = document.querySelector(".header-slash");
   const line = document.querySelector(".header-svg line");
+
+  // section 화면에 나타날 때 마다 fade 효과
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      const index = parseInt(entry.target.classList[1]);
+      console.log(index);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  });
+
+  sections.forEach((section) => {
+    io.observe(section);
+  });
 
   function navMove() {
     // 밑에서 위로 올라오는 네비게이션 메뉴
@@ -67,7 +88,7 @@
       slash.style.opacity = bgPosition.top * 0.0019; // slash fade out
     } else if (viewportWidth < 769 && bgWidth > viewportWidth / 2) {
       // mobile
-      console.log((viewportWidth - bgWidth) / 3);
+      //console.log((viewportWidth - bgWidth) / 3);
       let percentage = (viewportWidth - bgWidth) / 2.3;
       headerContainer.style.opacity = `${percentage}%`;
       if (bgWidth > viewportWidth) {
@@ -126,6 +147,7 @@
     }
   }
 
+  window.addEventListener("load", navMove);
   window.addEventListener("scroll", navMove);
 
   window.addEventListener("load", slashChange);

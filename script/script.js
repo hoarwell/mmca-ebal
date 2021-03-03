@@ -13,13 +13,18 @@
 
   // section 화면에 나타날 때 마다 fade 효과
   const io = new IntersectionObserver((entries, observer) => {
+    const newList = [...lists];
+
     entries.forEach((entry) => {
       const index = parseInt(entry.target.classList[1]);
-      console.log(index);
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+        console.log(index, newList[index]); // yeeeesss it's workingggg
+        // have to add '.ative' class on each nav-list a tags
+        newList[index].classList.add("active");
       } else {
         entry.target.classList.remove("visible");
+        newList[index].classList.remove("active");
       }
     });
   });

@@ -1,4 +1,32 @@
 @import "../style/header.css";
+/* LOADING */
+.loading-container {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.loading-container .loader {
+  width: 30%;
+  animation: spin 2s linear infinite;
+  margin-bottom: 5%;
+  margin: 0 auto;
+}
+
+.loadingContainer p {
+  font-size: 2rem;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .detail-container {
   width: 70vw;
@@ -31,10 +59,13 @@ a[href^="tel"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20rem;
+  width: 15rem;
   height: 8vh;
   border: 2px solid black;
   border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .reservation-container {
@@ -142,6 +173,23 @@ div {
 }
 
 @media screen and (max-width: 769px) {
+  .loading-container {
+    left: 10%;
+    top: 40%;
+    z-index: 999;
+  }
+  
+  .loading-container .loader {
+    width: 30%;
+    animation: spin 2s linear infinite;
+    margin-bottom: 5%;
+  }
+  
+  .loadingContainer p {
+    font-family: helvetica;
+    font-size: 2rem;
+  }
+
   .detail-container {
     width: 90vw;
   }
@@ -166,7 +214,9 @@ div {
     width: 30vw;
     height: 8vh;
     border: 1.5px solid black;
+    font-size: 2.8vw;
     font-weight: bold;
+    z-index: 999;
   }
 
   .reservation-container {

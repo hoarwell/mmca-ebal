@@ -10,11 +10,31 @@
   const headerContainer = document.querySelector(".header-container");
   const slash = document.querySelector(".header-slash");
   const line = document.querySelector(".header-svg line");
+  const loader = document.querySelector(".loader");
+  const loadingContainer = document.querySelector(".loading-container");
+
+  function noScroll() {
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener('scroll', noScroll);
+  headerContainer.style.display = "none";
+
+  document.onreadystatechange = () => {
+    if (document.readyState !== "complete") {
+      loadingContainer.style.display = "block";
+    } else {
+      window.removeEventListener('scroll', noScroll);
+      loadingContainer.style.display = "none";
+      headerContainer.style.display = "flex";
+      lang.style.display = "block"
+      slash.style.display = "block";
+    }
+  };
 
   // section 화면에 나타날 때 마다 fade 효과
   const io = new IntersectionObserver((entries, observer) => {
     const newList = [...lists];
-
     entries.forEach((entry) => {
       const index = parseInt(entry.target.classList[1]);
       if (entry.isIntersecting) {
